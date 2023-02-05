@@ -13,7 +13,7 @@ export default function JobBoard() {
   const { setSelectedJobId } = useContext(jobIdContext);
 
   useEffect(() => {
-    const dataJobs = axios.get("http://localhost:5000/api/jobs");
+    const dataJobs = axios.get("http://localhost:5000/jobs");
     dataJobs
       .then((response) => {
         setJobs(response.data);
@@ -26,7 +26,7 @@ export default function JobBoard() {
   }
 
   function deleteJobs(jobId) {
-    const response = axios.delete(`http://localhost:5000/api/jobs/${jobId}`);
+    const response = axios.delete(`http://localhost:5000/jobs/${jobId}`);
     response
       .then((response) => console.log("deletou"))
       .catch((error) => console.log(error));
