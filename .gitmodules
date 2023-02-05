@@ -1,0 +1,3 @@
+[submodule "DevJobs-front"]
+	path = DevJobs-front
+	url = git@github.com:voller-96/DevJobs-front.git
