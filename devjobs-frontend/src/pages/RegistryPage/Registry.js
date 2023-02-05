@@ -37,7 +37,7 @@ export default function Registry() {
   }
 
   useEffect(() => {
-    const response = axios.get("http://localhost:5000/countries");
+    const response = axios.get("http://localhost:5000/api/countries");
     response
       .then((response) => {
         setCountries(
@@ -50,7 +50,7 @@ export default function Registry() {
   }, []);
 
   useEffect(() => {
-    const response = axios.get("http://localhost:5000/position");
+    const response = axios.get("http://localhost:5000/api/position");
     response
       .then((response) => {
         setPositions(
@@ -72,7 +72,7 @@ export default function Registry() {
       countryId: selectedLocation.id,
       positionId: selectedPosition.id,
     };
-    const response = axios.post("http://localhost:5000/jobs", jobFinalInfo);
+    const response = axios.post("http://localhost:5000/api/jobs", jobFinalInfo);
     response
       .then((response) => {
         Navigate("/");
