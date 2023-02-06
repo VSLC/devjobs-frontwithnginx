@@ -17,7 +17,7 @@ export default function InfoPage() {
   const [info, setInfo] = useState({});
 
   useEffect(() => {
-    const response = axios.get(`http://localhost:5000/jobs/${selectedJobId}`);
+    const response = axios.get(`http://54.175.241.236/jobs/${selectedJobId}`);
     response
       .then((response) => {
         setInfo(response.data);
